@@ -19,7 +19,7 @@ public class OdontologoDaoH2 implements IDao<Odontologo> {
     private static final String SELECT ="SELECT * FROM ODONTOLOGOS";
 
     @Override
-    public Odontologo registroOdontologo (Odontologo odontologo) {
+    public Odontologo guardar (Odontologo odontologo) {
         Connection connection = null;
 
         try {
@@ -53,8 +53,24 @@ public class OdontologoDaoH2 implements IDao<Odontologo> {
         return odontologo;
 
     }
+
     @Override
-    public List<Odontologo>listaOdontologos() {
+    public Odontologo buscar(Integer id) {
+        return null;
+    }
+
+    @Override
+    public void eliminar(Integer id) {
+
+    }
+
+    @Override
+    public void actualizar(Odontologo odontologo) {
+
+    }
+
+    @Override
+    public List<Odontologo>listarTodos() {
         Connection connection = null;
         List<Odontologo> odontologos = new ArrayList<>();
 

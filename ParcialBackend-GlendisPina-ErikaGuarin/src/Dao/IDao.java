@@ -2,8 +2,11 @@ package Dao;
 import java.util.List;
 
 public interface IDao <T>{
-    T registroOdontologo(T t);
+    T guardar(T t);
+    T buscar (Integer id);
+    void eliminar (Integer id);
+    void actualizar(T t);
 
-    List<T>listaOdontologos();
+    List<T>listarTodos();
 
 }
